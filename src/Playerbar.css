@@ -1,7 +1,7 @@
 .player-bar {
   background: hsla(0, 0%, 0%, 1.0);
   bottom: 0;
-  height: 100px;
+  height: 165px;
   position: fixed;
   width: 100%;
   padding-top: 40px;
@@ -48,7 +48,6 @@
 /* #play-pause[playState="playing"] .ion-pause {
   display: block;
 }
-
 #play-pause[playState="playing"] .ion-play {
   display: none;
 } */
