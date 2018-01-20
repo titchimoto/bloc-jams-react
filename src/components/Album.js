@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
-
+import Song from './Song';
+import './../Album.css';
 
 class Album extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Album extends Component {
 
     this.state = {
       album: album,
-      currentSong: album.songs[0],
+      currentSong: '',
       currentTime: 0,
       duration: album.songs[0].duration,
       volume: 0,
@@ -114,6 +115,7 @@ class Album extends Component {
 
   render() {
     return (
+
       <section className="album">
         <section id="album-info">
           <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
@@ -124,6 +126,9 @@ class Album extends Component {
           </div>
         </section>
 
+
+
+<div id="bottom-half">
         <table id="song-list">
           <colgroup>
             <col id="song-number-column" />
@@ -132,22 +137,20 @@ class Album extends Component {
           </colgroup>
           <tbody>
           { this.state.album.songs.map( (song, index) =>
-          <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-           <td className="song-number">
-             <button>
-               <span className="song-number-column">{index + 1}</span>
-               <span className="ion-play"></span>
-               <span className="ion-pause"></span>
-            </button>
-           </td>
-           <td className="song-title">{song.title}</td>
-           <td className="song-duration">{this.formatTime(song.duration)}</td>
-          </tr>
+            <Song song={song}
+                  index={index}
+                  handleSongClick={this.handleSongClick.bind(this)}
+                  formatTime={this.formatTime}
+                  isPlaying={this.state.isPlaying}
+                  currentSong={this.state.currentSong == song}
+            />
+
             )
           }
 
           </tbody>
         </table>
+
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
@@ -161,7 +164,10 @@ class Album extends Component {
           handleVolumeChange={ (e) => this.handleVolumeChange(e)}
           formatTime={ (timeInS) => this.formatTime(timeInS)}
         />
+          </div>
       </section>
+
+
     );
   }
 }

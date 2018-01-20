@@ -3,3 +3,88 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+nav img {
+  height: 80px;
+  padding-right: 25px;
+}
+
+
+div #featured-image {
+  background: url('/assets/images/headerimg.jpeg') no-repeat;
+  height: 500px;
+  background-size: auto auto;
+}
+
+.featured-title {
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  font-size: 5.0rem;
+  text-align: center;
+  margin: auto;
+  padding: 200px 0;
+  text-shadow: 5px 5px 2px #333333;
+
+}
+
+
+nav {
+  background: hsla(0%, 0%, 0%, 0);
+  padding: 1rem 2rem;
+  vertical-align: 1.0rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar a {
+  font-weight: bold;
+  vertical-align: 1.0rem;
+}
+
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #555555;
+  text-decoration: none;
+
+}
+
+.ion-headphone {
+  font-size: 4.0rem;
+}
+
+.ion-iphone {
+  font-size: 4.0rem;
+}
+
+.ion-wifi {
+  font-size: 4.0rem;
+}
+
+.point-column {
+  float: left;
+  width: 30%;
+  padding: 20px;
+text-align: center;
+}
+
+.selling-points:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.selling-points {
+  width: 80%;
+  margin: auto;
+  padding: 15px 50px 0 50px;
+}
+
+
+
+/* background-image: url('/assets/images/bg.jpg'); */
