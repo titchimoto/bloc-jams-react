@@ -2,9 +2,9 @@
 
 Bloc Jams is a browser-based media player, similar to Spotify/iTunes, built using React.
 
-!(https://s3.amazonaws.com/motoportfoliobucket/github/motif.jpg "Bloc Jams")
-!(https://s3.amazonaws.com/motoportfoliobucket/github/motif1.jpg "Bloc Jams 1")
+![Bloc Jams](https://s3.amazonaws.com/motoportfoliobucket/github/motif.jpg "Bloc Jams")
 
+![Bloc Jams](https://s3.amazonaws.com/motoportfoliobucket/github/motif1.jpg "Bloc Jams 1")
 
 # Usage
 
